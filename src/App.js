@@ -7,7 +7,7 @@ function App() {
 
  
   return (
-    <div className="App">
+    <div>
      <h2 className='text-info m-4'>Guiter Gallary</h2>
      <Shopping></Shopping>
 
