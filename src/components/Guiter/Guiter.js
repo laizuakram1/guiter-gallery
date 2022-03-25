@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Guiter.css';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-const Guiter = ({guiter}) => {
+
+const Guiter = ({guiter, AddCartItem}) => {
     const {name, price, image} = guiter;
     return (
         <div className='guiter'  >
@@ -14,7 +15,7 @@ const Guiter = ({guiter}) => {
             <p>price:${price}</p>
             </div>
 
-          <Button className='addCartBtn'>Add To Cart
+          <Button onClick={() => AddCartItem(guiter)} className='addCartBtn'>Add To Cart
          <span className='addCartIcon'> <FontAwesomeIcon icon ={faShoppingCart}></FontAwesomeIcon></span>
           </Button>
          
