@@ -1,7 +1,8 @@
 import React from 'react';
+import { ListGroupItem } from 'react-bootstrap';
 
 const Cart = ({cart}) => {
-    let name = '';
+    let name = [];
     for (const guiter of cart){
        name = guiter.name;
       
@@ -9,7 +10,9 @@ const Cart = ({cart}) => {
     }
     return (
         <div>
-          <h2>{name}</h2>
+         <ul>
+         <h5>{name}</h5>
+         </ul>
         </div>
     );
 };
