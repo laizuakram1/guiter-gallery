@@ -12,12 +12,14 @@ const Shopping = () => {
     .then(data => setGuiters(data));
   }, [])
     return (
-        <div className='shopping-container'>
+        <div className='shopping-container container'>
             <div className='shopping-items'>
-               
-                {
+               <div className='guiter-container'>
+               {
                     guiters.map(guiter => <Guiter guiter = {guiter}></Guiter>)
                 }
+               </div>
+                
             </div>
             <div className='shopping-cart'>
                 <h3>shopping summary</h3>
