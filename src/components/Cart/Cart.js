@@ -1,7 +1,5 @@
 
 import SetCartInfo from '../setCartInfo/SetCartInfo';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 
