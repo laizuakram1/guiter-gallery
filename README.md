@@ -1,9 +1,9 @@
-# Guiter GAllary with React
+# Guiter Gallary with React
 
 
-## Private Repo-link
+## Live link: https://voluble-fenglisu-6dff42.netlify.app/
 
-https://voluble-fenglisu-6dff42.netlify.app/
+
 
 ### `npm start`
 
