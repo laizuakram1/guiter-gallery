@@ -1,15 +1,14 @@
 # Guiter GAllary with React
 
-This project was bootstrapped with [Create React App](https://voluble-fenglisu-6dff42.netlify.app/).
 
-## Available Scripts
+## Private Repo-link
 
-In the project directory, you can run:
+https://voluble-fenglisu-6dff42.netlify.app/
 
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [https://voluble-fenglisu-6dff42.netlify.app/](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
