@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Guiter from '../Guiter/Guiter';
 import Cart from '../Cart/Cart';
 import './Shopping.css';
+import { Button } from 'react-bootstrap';
 
 const Shopping = () => {
     const [guiters, setGuiters] = useState([]);
@@ -18,6 +19,10 @@ const Shopping = () => {
       let newCart = [...cart, guiter];
       setCart(newCart);
   }
+
+  const ChoseOneBtn = ({items}) => {
+    Math.random(items);
+  }
     return (
         <div className='shopping-container container'>
             <div className='shopping-items'>
@@ -27,14 +32,21 @@ const Shopping = () => {
                         key = {guiter.id}
                         guiter = {guiter}
                         AddCartItem = {AddCartItem}
-                        ></Guiter>)
+                        
+                        ></Guiter>
+                        )
                 }
+                
+                  
+                
                </div>
                 
             </div>
             <div className='shopping-cart'>
-                <h4>Cart summary</h4>
-                <Cart cart = {cart}></Cart>
+                <h4>Selected Guiters</h4>
+                <Cart cart = {cart} ChoseOneBtn = {ChoseOneBtn}></Cart>
+                <br /><br />
+                <Button onClick={ChoseOneBtn} className='choseBtn'>CHOSE 1 FOR ME</Button>
             </div>
         </div>
     );

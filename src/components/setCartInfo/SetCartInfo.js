@@ -1,11 +1,18 @@
 import React from 'react';
+import './SetCartInfo.css'
 
-const SetCartInfo = ({guiter}) => {
-    // console.log(guiter);
+
+const SetCartInfo = ({guiter, ChoseOneBtn}) => {
+    console.log(ChoseOneBtn);
+    let items = [];
+   ChoseOneBtn(items)
+
     return (
         <div>
-            <h4>{guiter.name}</h4>
+            <p>{[...items,guiter.name]}</p>
+            
         </div>
+        
     );
 };
 
