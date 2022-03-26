@@ -9,6 +9,8 @@ const Shopping = () => {
     const [guiters, setGuiters] = useState([]);
     const [cart, setCart] = useState([]);
 
+     
+
      useEffect( () => {
     fetch("guiters.json")
     .then(res => res.json())
@@ -16,26 +18,31 @@ const Shopping = () => {
   }, [])
 
   const AddCartItem = (guiter) =>{
-      let newCart = [...cart, guiter];
-      setCart(newCart);
+      let newCart = [];
+       newCart = [...cart, guiter];
+       setCart(newCart);
   }
 
-  const ChoseOneBtn = ({items}) => {
-    Math.random(items);
-  }
+ 
     return (
         <div className='shopping-container container'>
             <div className='shopping-items'>
                <div className='guiter-container'>
                {
-                    guiters.map(guiter => <Guiter 
-                        key = {guiter.id}
-                        guiter = {guiter}
-                        AddCartItem = {AddCartItem}
-                        
-                        ></Guiter>
-                        )
-                }
+                   guiters.map(guiter => <Guiter 
+                    key = {guiter.id}
+                    guiter = {guiter}
+                    AddCartItem = {AddCartItem}
+                    
+                    ></Guiter>)
+               }
+                
+                
+                {/* <Guiter
+                 guiters = {guiters}
+                 key = {guiters.id}
+                 ></Guiter> */}
+            
                 
                   
                 
@@ -44,9 +51,9 @@ const Shopping = () => {
             </div>
             <div className='shopping-cart'>
                 <h4>Selected Guiters</h4>
-                <Cart cart = {cart} ChoseOneBtn = {ChoseOneBtn}></Cart>
+                <Cart cart = {cart}></Cart>
                 <br /><br />
-                <Button onClick={ChoseOneBtn} className='choseBtn'>CHOSE 1 FOR ME</Button>
+              
             </div>
         </div>
     );

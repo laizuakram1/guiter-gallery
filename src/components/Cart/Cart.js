@@ -1,20 +1,28 @@
 
 import SetCartInfo from '../setCartInfo/SetCartInfo';
-import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
 
-const Cart = ({cart, ChoseOneBtn}) => {
-    // console.log(cart)
+const Cart = ({cart}) => {
+   const [choseOne, setChoseOne] = useState([])
+    
+    const randomOne = (cart) => {
+        if(cart.length >= 0){
+            let random = cart[Math.floor(Math.random() * cart.length)]
+            console.log()
+            setChoseOne(random);
+            alert(random.name);
+        }
+    }
  
     return (
         <div>
             {
-                cart.map(guiter => <SetCartInfo 
-                    guiter = {guiter}
-                    ChoseOneBtn = {ChoseOneBtn}
-                
-                ></SetCartInfo>)
+                cart.map(guiter => <SetCartInfo guiter = {guiter} key = {guiter.id}></SetCartInfo>)
             }
-            
+              <Button onClick={randomOne} className='choseBtn'>CHOSE 1 FOR ME</Button>
         </div>
     );
 };

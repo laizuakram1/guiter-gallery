@@ -3,15 +3,15 @@ import './SetCartInfo.css'
 
 
 const SetCartInfo = ({guiter, ChoseOneBtn}) => {
-    console.log(ChoseOneBtn);
-    let items = [];
-   ChoseOneBtn(items)
+    console.log(guiter);
+    
+    
 
     return (
         <div>
-            <p>{[...items,guiter.name]}</p>
-            
+            <p>Name: {guiter.name}</p>
         </div>
+        
         
     );
 };
