@@ -10,6 +10,8 @@
    
 }
 .shopping-cart{
+    position:sticky;
+    top:0;
     background-color: aliceblue;
     padding:10px;
     border-radius:10px;
