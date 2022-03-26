@@ -10,9 +10,12 @@
    
 }
 .shopping-cart{
-    position:sticky;
+    width:280px;
+    height: 100vh;
+    position:fixed;
+    right:20px;
     top:0;
-    background-color: aliceblue;
+    background-color: rgb(207, 241, 235);
     padding:10px;
     border-radius:10px;
     text-align: center;
