@@ -11,8 +11,9 @@ const Cart = ({cart}) => {
     const randomOne = (cart) => {
         if(cart.length >= 0){
             let random = cart[Math.floor(Math.random() * cart.length)]
-            console.log()
+           
             setChoseOne(random);
+            
             alert(random.name);
         }
     }
@@ -22,7 +23,7 @@ const Cart = ({cart}) => {
             {
                 cart.map(guiter => <SetCartInfo guiter = {guiter} key = {guiter.id}></SetCartInfo>)
             }
-              <Button onClick={randomOne} className='choseBtn'>CHOSE 1 FOR ME</Button>
+              <Button onClick={() =>randomOne(cart)} className='choseBtn'>CHOSE 1 FOR ME</Button>
         </div>
     );
 };

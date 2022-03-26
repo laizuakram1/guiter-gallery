@@ -3,7 +3,7 @@ import './SetCartInfo.css'
 
 
 const SetCartInfo = ({guiter, ChoseOneBtn}) => {
-    console.log(guiter);
+    
     
     
 
