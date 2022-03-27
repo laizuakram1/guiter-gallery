@@ -5,6 +5,7 @@ import { Button } from 'react-bootstrap';
 
 const Cart = ({cart}) => {
    const [choseOne, setChoseOne] = useState([])
+//    const [clear, setClear] = useState([])
     
     const randomOne = (cart) => {
         if(cart.length >= 0){
@@ -14,7 +15,10 @@ const Cart = ({cart}) => {
             
             alert(random.name);
         }
+
+        
     }
+
  
     return (
         <div>
@@ -22,6 +26,8 @@ const Cart = ({cart}) => {
                 cart.map(guiter => <SetCartInfo guiter = {guiter} key = {guiter.id}></SetCartInfo>)
             }
               <Button onClick={() =>randomOne(cart)} className='choseBtn'>CHOSE 1 FOR ME</Button>
+              <Button className='btn btn-danger mt-3'>Chose Again</Button>
+              
         </div>
     );
 };

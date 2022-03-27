@@ -2,14 +2,11 @@ import React from 'react';
 import './SetCartInfo.css'
 
 
-const SetCartInfo = ({guiter, ChoseOneBtn}) => {
+const SetCartInfo = ({guiter}) => {
     
-    
-    
-
     return (
         <div>
-            <p>Name: {guiter.name}</p>
+            <p>{guiter.name}</p>
         </div>
         
         
